@@ -1,20 +1,43 @@
+import { validateEmail } from '../utils/helpers';
+
+
 export default function Contact() {
+
+
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
+    <form class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Please provide your name"
+          required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          aria-describedby="emailHelp"
+          placeholder="Please provide your email"
+          required />
+        <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="3"
+          placeholder="Let me know what you think!"
+          required>
+        </textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   );
 }

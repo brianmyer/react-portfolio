@@ -1,14 +1,14 @@
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
+      <img src="./src/assets/88A9D462-88CF-42C3-A80D-EEE2E8B83A4B-13864-000025080E0EB711_tmp.JPG"
+        alt="Portrait of Brian James Myer"
+        height="200"
+        width="300"
+      />
+      <h1>About</h1>
       <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
+        Enterprising full stack web developer with over a decade of experience in cross-functional collaboration in high pressure situations. Strong ability to work both independently and collaboratively in fast-paced, agile environments. Proficient in both front-end and back-end technologies, with expertise in HTML, CSS, JavaScript, SQL, Node.js, and relational databases. Skilled in creating responsive and visually appealing user interfaces while ensuring seamless integration with server-side functionalities. Strong problem-solving abilities and a passion for staying up-to-date with industry trends and emerging technologies. Certificate of Completion in Full-Stack Web Development from the University of Pennsylvania in collaboration with edX LLC.
       </p>
     </div>
   );
