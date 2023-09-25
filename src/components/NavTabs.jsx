@@ -6,40 +6,40 @@ function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
+    <nav className="nav nav-tabs">
+      <button className="nav-item btn btn-outline-secondary me-2">
         <Link
           to="/"
           className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
         >
           Home
         </Link>
-      </li>
-      <li className="nav-item">
+      </button>
+      <button className="nav-item btn btn-sm btn-outline-secondary me-2">
         <Link
           to="/Portfolio"
           className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
         </Link>
-      </li>
-      <li className="nav-item">
+      </button>
+      <button className="nav-item btn btn-sm btn-outline-secondary me-2">
         <Link
           to="/Contact"
           className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
         </Link>
-      </li>
-      <li className="nav-item">
+      </button>
+      <button className="nav-item btn btn-sm btn-outline-secondary me-2">
         <Link
           to="/Resume"
           className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
         >
           Resume
         </Link>
-      </li>
-    </ul>
+      </button>
+    </nav>
   );
 }
 
