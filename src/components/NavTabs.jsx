@@ -6,11 +6,11 @@ function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
-    <nav className="nav nav-tabs">
+    <nav className="nav nav-tabs py-2">
       <button className="nav-item btn btn-outline-secondary me-2">
         <Link
           to="/"
-          className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+          className= {currentPage === '/' ? 'nav-link active' : 'nav-link'} 
         >
           Home
         </Link>
