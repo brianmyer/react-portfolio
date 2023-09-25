@@ -37,7 +37,7 @@ export default function Contact() {
           required>
         </textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-dark">Submit</button>
     </form>
   );
 }
