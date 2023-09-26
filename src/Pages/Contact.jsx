@@ -54,51 +54,54 @@ export default function Contact() {
   };
 
   return (
-    <form onSubmit={handleSubmit} >
-      <div className="form-group my-3">
-        <label for="name">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          onBlur={validateName}
-          placeholder="Please provide your name"
-           />
-        <div className="error text-danger">{nameError}</div>
-      </div>
-      <div className="form-group my-3">
-        <label for="email">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onBlur={validateEmail}
-          placeholder="Please provide your email"
-           />
-        <small id="emailHelp" className="form-text text-muted">I'll never share your email with anyone else.</small>
-        <div className="error text-danger">{emailError}</div>
-      </div>
-      <div className="form-group my-3">
-        <label for="message">Message</label>
-        <textarea
-          className="form-control"
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          onBlur={validateMessage}
-          rows="3"
-          placeholder="Let me know what you think!"
+    <div>
+      <h1>Contact</h1>
+      <form onSubmit={handleSubmit} >
+        <div className="form-group my-3">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onBlur={validateName}
+            placeholder="Please provide your name"
+          />
+          <div className="error text-danger">{nameError}</div>
+        </div>
+        <div className="form-group my-3">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={validateEmail}
+            placeholder="Please provide your email"
+          />
+          <small id="emailHelp" className="form-text text-muted">I'll never share your email with anyone else.</small>
+          <div className="error text-danger">{emailError}</div>
+        </div>
+        <div className="form-group my-3">
+          <label for="message">Message</label>
+          <textarea
+            className="form-control"
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onBlur={validateMessage}
+            rows="3"
+            placeholder="Let me know what you think!"
           >
-        </textarea>
-        <div className="error text-danger">{messageError}</div>
-      </div>
-      <button type="submit" class="btn btn-dark my-3" >Submit</button>
-      <div className={`error text-${submitMessageClass}`}>{submitMessage}</div>
-    </form>
+          </textarea>
+          <div className="error text-danger">{messageError}</div>
+        </div>
+        <button type="submit" class="btn btn-dark my-3" >Submit</button>
+        <div className={`error text-${submitMessageClass}`}>{submitMessage}</div>
+      </form>
+    </div>
   );
 }

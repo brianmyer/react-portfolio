@@ -1,6 +1,6 @@
 export default function Project({src, alt, title, text, app, repo}) {
     return (
-            <div className="card col" style={{ width: "18rem" }}>
+            <div className="card col m-3 p-3" style={{ width: "18rem" }}>
                 <img src={src} className="card-img-top" alt={alt} />
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
