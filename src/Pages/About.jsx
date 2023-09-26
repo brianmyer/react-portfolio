@@ -3,8 +3,9 @@ export default function About() {
     <div>
       <img src="./src/assets/88A9D462-88CF-42C3-A80D-EEE2E8B83A4B-13864-000025080E0EB711_tmp.JPG"
         alt="Portrait of Brian James Myer"
-        height="200"
-        width="300"
+        height="100"
+        width="150"
+        className="rounded-circle"
       />
       <h1>About</h1>
       <p>

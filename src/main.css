@@ -1,6 +1,26 @@
-.linear-gradient-banner {
-    background: linear-gradient(to right, #e5dfde, #25292d);
-    padding: 0; /* Adjust padding as needed */
-    color: #fff; /* Text color on the banner */
-    text-align: center;
+  .vh-70 {
+    height: 70vh;
+    overflow-y: auto; 
+  }
+
+  .vh-20 {
+    height: 20vh;
+  }
+
+  .vh-10 {
+    height: 10vh;
+  }
+
+  .card:hover {
+    opacity: .5;
+  }
+
+  .custom-background {
+background: linear-gradient(to right, #BEE3DB, #89B0AE);
+  }
+
+  .background-image {
+    background-image: url('./assets/pexels-karolina-grabowska-4040649.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; 
   }

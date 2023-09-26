@@ -5,8 +5,12 @@ export default function Project({src, alt, title, text, app, repo}) {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{text}</p>
-                    <button type="button" class="btn btn-dark" href={app}>Link to App</button>
-                    <button type="button" class="btn btn-dark" href={repo}>GitHub Repo</button>
+                    <a href={app}>
+                    <button type="button" class="btn btn-dark mx-2">Link to App</button>
+                    </a>
+                    <a href={repo}>
+                    <button type="button" class="btn btn-dark mx-2" >GitHub Repo</button>
+                    </a>
                 </div>
             </div>
     );

@@ -55,11 +55,11 @@ export default function Contact() {
 
   return (
     <form onSubmit={handleSubmit} >
-      <div class="form-group">
+      <div className="form-group my-3">
         <label for="name">Name</label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -68,11 +68,11 @@ export default function Contact() {
            />
         <div className="error text-danger">{nameError}</div>
       </div>
-      <div class="form-group">
+      <div className="form-group my-3">
         <label for="email">Email address</label>
         <input
           type="email"
-          class="form-control"
+          className="form-control"
           id="email"
           name="email"
           value={email}
@@ -80,13 +80,13 @@ export default function Contact() {
           onBlur={validateEmail}
           placeholder="Please provide your email"
            />
-        <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+        <small id="emailHelp" className="form-text text-muted">I'll never share your email with anyone else.</small>
         <div className="error text-danger">{emailError}</div>
       </div>
-      <div class="form-group">
+      <div className="form-group my-3">
         <label for="message">Message</label>
         <textarea
-          class="form-control"
+          className="form-control"
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -97,7 +97,7 @@ export default function Contact() {
         </textarea>
         <div className="error text-danger">{messageError}</div>
       </div>
-      <button type="submit" class="btn btn-dark" >Submit</button>
+      <button type="submit" class="btn btn-dark my-3" >Submit</button>
       <div className={`error text-${submitMessageClass}`}>{submitMessage}</div>
     </form>
   );
