@@ -1,6 +1,4 @@
 import { useState } from 'react';
-// import { validateEmail } from '../utils/helpers';
-
 
 export default function Contact() {
 
@@ -10,6 +8,8 @@ export default function Contact() {
   const [emailError, setEmailError] = useState('');
   const [message, setMessage] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessageClass, setSubmitMessageClass] = useState('success')
 
   function validateName() {
     if (name.trim() === '') {
@@ -20,12 +20,13 @@ export default function Contact() {
   };
 
   function validateEmail() {
-    if (email.trim() === '') {
-      setEmailError('Email is required');
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(String(email).toLowerCase())) {
+      setEmailError('Invalid email address');
     } else {
       setEmailError('');
     }
-  };
+  }
 
   function validateMessage() {
     if (name.trim() === '') {
@@ -35,9 +36,25 @@ export default function Contact() {
     }
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    // If all validations pass, you can proceed with form submission
+    if (nameError === '' && emailError === '' && messageError === '' && name !== '') {
+      // Submit the form or perform other actions
+      setSubmitMessageClass('success');
+      setSubmitMessage('Message sent!');
+      setName('');
+      setEmail('');
+      setMessage('');
+    } else {
+      setSubmitMessageClass('danger');
+      setSubmitMessage('Please fill in all fields');
+    }
+  };
 
   return (
-    <form class="needs-validation" novalidate>
+    <form onSubmit={handleSubmit} >
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -48,7 +65,7 @@ export default function Contact() {
           onChange={(e) => setName(e.target.value)}
           onBlur={validateName}
           placeholder="Please provide your name"
-          required />
+           />
         <div className="error text-danger">{nameError}</div>
       </div>
       <div class="form-group">
@@ -62,7 +79,7 @@ export default function Contact() {
           onChange={(e) => setEmail(e.target.value)}
           onBlur={validateEmail}
           placeholder="Please provide your email"
-          required />
+           />
         <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
         <div className="error text-danger">{emailError}</div>
       </div>
@@ -76,11 +93,12 @@ export default function Contact() {
           onBlur={validateMessage}
           rows="3"
           placeholder="Let me know what you think!"
-          required>
+          >
         </textarea>
         <div className="error text-danger">{messageError}</div>
       </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
+      <button type="submit" class="btn btn-dark" >Submit</button>
+      <div className={`error text-${submitMessageClass}`}>{submitMessage}</div>
     </form>
   );
 }
