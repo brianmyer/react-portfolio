@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className='container'>
         <div className='row'>
         <Project
-          src="./src/assets/VW.png"
+          src="../assets/VW.png"
           alt="VoteWave logo"
           title="VoteWave"
           text="Your Voice, Your Choice."
@@ -17,7 +17,7 @@ export default function Portfolio() {
         </Project>
 
         <Project
-          src="./src/assets/arvdark.png"
+          src="../assets/arvdark.png"
           alt="ARV logo"
           title="ARV"
           text="Know exactly where and when to pick up your loved ones."
