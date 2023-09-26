@@ -1,3 +1,5 @@
+import vwLogo from "../assets/VW.png"
+import arvLogo from "../assets/arvdark.png"
 import Project from '../components/Project';
 
 export default function Portfolio() {
@@ -7,7 +9,7 @@ export default function Portfolio() {
       <div className='container'>
         <div className='row'>
         <Project
-          src="../assets/VW.png"
+          src={vwLogo}
           alt="VoteWave logo"
           title="VoteWave"
           text="Your Voice, Your Choice."
@@ -17,7 +19,7 @@ export default function Portfolio() {
         </Project>
 
         <Project
-          src="../assets/arvdark.png"
+          src={arvLogo}
           alt="ARV logo"
           title="ARV"
           text="Know exactly where and when to pick up your loved ones."

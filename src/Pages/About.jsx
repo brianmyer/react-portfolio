@@ -1,7 +1,9 @@
+import headshot from "../assets/headshot.jpg"
+
 export default function About() {
   return (
     <div className="my-4">
-      <img src="../assets/88A9D462-88CF-42C3-A80D-EEE2E8B83A4B-13864-000025080E0EB711_tmp.JPG"
+      <img src={headshot}
         alt="Portrait of Brian James Myer"
         height="100"
         width="150"
