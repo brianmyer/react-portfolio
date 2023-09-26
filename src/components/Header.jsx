@@ -6,7 +6,7 @@ export default function Header() {
         <div className="header-container text-center mb-3">
             <div className="background-image">
                 <a className="link-dark text-decoration-none" href="https://www.linkedin.com/in/brian-james-myer/">
-                    <h1 className="text-start">
+                    <h1 className="text-start pt-4">
                         Brian James Myer - Full Stack Web Developer
                     </h1>
                 </a>
