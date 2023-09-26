@@ -1,10 +1,11 @@
+import LinkedInLogo from "../assets/LI-In-Bug.png"
 export default function Footer() {
     return (
         <div className="p-2 mb-2 text-center mt-5 py-4 background-image">
             
             <a href="https://www.linkedin.com/in/brian-james-myer/" className="px-3">
 
-                <img src="../src/assets/LI-In-Bug.png"
+                <img src={LinkedInLogo}
                     alt="LinkedIn logo"
                     width="54"
                     height="48"
