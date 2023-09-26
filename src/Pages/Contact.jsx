@@ -40,7 +40,7 @@ export default function Contact() {
     e.preventDefault();
 
     // If all validations pass, you can proceed with form submission
-    if (nameError === '' && emailError === '' && messageError === '' && name !== '') {
+    if (nameError === '' && emailError === '' && messageError === '' && name !== '' && email !== '' && message !== '') {
       // Submit the form or perform other actions
       setSubmitMessageClass('success');
       setSubmitMessage('Message sent!');

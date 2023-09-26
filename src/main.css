@@ -1,0 +1,6 @@
+.linear-gradient-banner {
+    background: linear-gradient(to right, #e5dfde, #25292d);
+    padding: 0; /* Adjust padding as needed */
+    color: #fff; /* Text color on the banner */
+    text-align: center;
+  }
